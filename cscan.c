@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 int main() {
     int n, head, maxCyl;
     printf("Enter number of requests: "); scanf("%d", &n);
@@ -27,7 +28,7 @@ int main() {
 
     // continue right from 0
     for (int i = 0; i < n; i++)
-        if (req[i] < head) { seek += req[i]-cur; cur = req[i]; printf(" -> %d", cur); }
+        if (req[i] < head) { seek += abs(req[i]-cur); cur = req[i]; printf(" -> %d", cur); }
 
     printf("\nTotal Seek: %d\n", seek);
 }
