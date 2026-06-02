@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+//shortest job remaining first calculates the remaining time and kepp subtracting from the burst time 
+
 int main() {
     int n;
     printf("Enter number of processes: ");
